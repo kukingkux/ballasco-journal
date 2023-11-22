@@ -68,7 +68,11 @@ Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth:san
 //     Auth::routes(['register' => true]);
 // });
 
-Route::group(['middleware' => ['auth','role:admin|user'], 'as' => 'user.'], function() {
+Route::group([
+     'middleware' => ['auth'
+    // , 'role:admin|user'
+    ], 'as' => 'user.'
+], function() {
     Route::get('/dashboard', 'App\Http\Controllers\HomeController@index');
     Route::get('/history', 'App\Http\Controllers\AgendaController@history');
 
@@ -82,7 +86,11 @@ Route::group(['middleware' => ['auth','role:admin|user'], 'as' => 'user.'], func
     Route::resource('/agenda', AgendaController::class);
 });
 
-Route::group(['middleware' => ['auth', 'role:admin'], 'prefix' => 'admin', 'as' => 'admin.'], function(){
+Route::group([
+     'middleware' => ['auth'
+  //  , 'role:admin'
+    ], 'prefix' => 'admin', 'as' => 'admin.'
+], function(){
     Auth::routes(['register' => true]);
     Route::get('/', 'App\Http\Controllers\HomeController@adminpage')->name('index');
     Route::get('/user', 'App\Http\Controllers\UserController@user');
@@ -100,7 +108,7 @@ Route::group(['middleware' => ['auth', 'role:admin'], 'prefix' => 'admin', 'as' 
 
 });
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
 
  Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 //Route::get('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
@@ -109,7 +117,7 @@ Auth::routes(['register' => true]);
 
 
 
-Route::get('deleteuser/{id}','App\Http\Controllers\UserController@deleteuser');
+Route::get('deleteuser/{id}','App\Http\Controllers\UserController@destroy');
 
 
 

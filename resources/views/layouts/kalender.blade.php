@@ -5,8 +5,8 @@
 </head>
 
 <body>
-    <div>
-        <div class="mt-4 mb-2 container-calendar p-2" style="box-shadow: 0px -5px 20px -10px #a18aff">
+
+        <div class="mt-4 container-calendar p-2" style="box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75); background-color: #fff">
             <header>
                 <p class="current-date">Agustus 2023</p>
                 <div class="icons">
@@ -32,7 +32,7 @@
                 <ul class="days mb-2"></ul>
             </div>
         </div>
-    </div>
+
 
     <script src="js/kalender.js"></script>
 </body>

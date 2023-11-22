@@ -1,9 +1,9 @@
 @extends('partials.history_head')
 
-<body style="background-color: #D9D9D9;">
+<body style="background-color: #D9D9D9 ;">
 
-    <div style="display: flex; gap: 10px;">
-        @include('layouts.nav')
+    <div style="display: flex; gap: 10px; " >
+        @include('layouts.sidenav')
         <div class="m-2" style="width: 100%">
             <div class="container pe-5">
                 <div class="row">
@@ -21,11 +21,11 @@
                     </h5>
                     <div>
                         <div class="d-flex coll">
-                            <div class="col" style="box-shadow: 0px 10px 20px -10px #A18AFF;">
+                            <div class="col" style="box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);">
                                 <input class="form-control" type="text" placeholder="Employee Name" disabled
                                     aria-label="default input example" value="{{ $currentuser->name }}">
                             </div>
-                            <div class="col input-group" style="box-shadow: 0px 10px 20px -10px #A18AFF;">
+                            <div class="col input-group" style="box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);">
                                 <select class="form-select form-control-sm filter-select" id="month">
                                     <option selected>Select Month</option>
                                     @foreach ($month as $m)
@@ -34,7 +34,7 @@
 
                                 </select>
                             </div>
-                            <div class="col input-group" style="box-shadow: 0px 10px 20px -10px #A18AFF;">
+                            <div class="col input-group" style="box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);">
                                 <select class="form-select form-control-sm filter-select" id="year">
                                     <option selected>Select Year</option>
                                     @foreach ($year as $y)
@@ -46,10 +46,10 @@
                     </div>
                     <div class="mt-4">
                         <div
-                            style="background-color: rgb(255, 255, 255); border-radius: 10px; overflow-x: scroll; box-shadow: 0px 10px 20px -10px #A18AFF;">
+                            style="background-color: rgb(255, 255, 255); border-radius: 10px; overflow-x: scroll; box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);">
                             <div class="row text-center">
 
-                                <table class="table table-striped mt-3" id="datatable">
+                                <table class="table table-striped mt-3" id="datatable" >
                                     <thead>
                                         <tr>
 

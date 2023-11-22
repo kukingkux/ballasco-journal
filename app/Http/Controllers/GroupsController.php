@@ -19,10 +19,10 @@ class GroupsController extends Controller
 
     public function index()
     {
-        $groups = Groups::where('group_name', '!=', 'admins')->get();
+        $groups = Groups::where('group_name', '!=', 'admin')->get();
         $office = Office::all();
 
-        $group_admin = Groups::where('group_name', 'admins')->first();
+        $group_admin = Groups::where('group_name', 'admin')->first();
 
 
         return view('admin.groups', compact('groups', 'office', 'group_admin'));
@@ -44,8 +44,8 @@ class GroupsController extends Controller
 
     public function update(Request $request, Groups $group)
     {
-        $validated = $request->validate(['name' => 'required']);
-        $group->update($validated);
+        $input = $request->all();
+        $group->fill($input)->save();
 
         return to_route('admin.groups.index');
     }

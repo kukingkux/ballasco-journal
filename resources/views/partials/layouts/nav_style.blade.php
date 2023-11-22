@@ -71,26 +71,26 @@
 
     .navsd .btn.btn-primary.mainsd:active {
         width: 100%;
-        background-color: #6f61c0;
-        border: 2px solid #6f61c0;
-        border-bottom: 6px solid #6558a9;
+        background-color: #000000;
+        border: 2px solid #000000;
+        border-bottom: 6px solid #444444;
         color: #fff;
     }
 
     /*offcanvas*/
     .offcanvas-body .wrapp .nav-item .nav-link {
         margin-bottom: 8px;
-        color: #6f61c0;
+        color: #000000;
         border: 2px solid #dddddd;
         border-bottom: 6px solid #dddddd;
         background-color: #fff;
     }
 
     .offcanvas-body .wrapp .nav-item .nav-link:hover {
-        background-color: #6f61c0;
+        background-color: #000000;
         color: white;
-        border: 2px solid #6f61c0;
-        border-bottom: 6px solid #6558a9;
+        border: 2px solid #000000;
+        border-bottom: 6px solid #444444;
     }
 
     .offcanvas-body {
@@ -103,47 +103,47 @@
     }
 
     .offcanvas-body .wrapp .nav-item .nav-link.active {
-        background-color: #6f61c0;
+        background-color: #000000;
         color: white;
-        border: 2px solid #6f61c0;
-        border-bottom: 6px solid #6558a9;
+        border: 2px solid #000000;
+        border-bottom: 6px solid #444444;
     }
 
     /* CSS untuk tombol aktif */
     .navsd .nav-link {
         margin-bottom: 8px;
-        color: #6f61c0 !important;
+        color: #000000 !important;
         border: 2px solid #dddddd;
         border-bottom: 6px solid #dddddd;
         background-color: #fff;
     }
 
     .navsd .nav-link:hover {
-        background-color: #6f61c0 !important;
+        background-color: #000000 !important;
         color: white !important;
-        border: 2px solid #6f61c0 !important;
-        border-bottom: 6px solid #6558a9 !important;
+        border: 2px solid #000000 !important;
+        border-bottom: 6px solid #444444 !important;
     }
 
     .navsd .nav-link.active {
-        background-color: #6f61c0 !important;
+        background-color: #000000 !important;
         color: white !important;
-        border: 2px solid #6f61c0 !important;
-        border-bottom: 6px solid #6558a9 !important;
+        border: 2px solid #000000 !important;
+        border-bottom: 6px solid #444444 !important;
     }
 
     .nav-item .nav-link {
         margin-bottom: 8px;
-        color: #6f61c0;
+        color: #000000;
         border: 2px solid #dddddd;
         border-bottom: 6px solid #dddddd;
         background-color: #fff;
     }
 
     .nav-item .nav-link.active {
-        background-color: #6f61c0 !important;
+        background-color: #000000 !important;
         color: white;
-        border: 2px solid #6f61c0;
-        border-bottom: 6px solid #6558a9;
+        border: 2px solid #000000;
+        border-bottom: 6px solid #444444;
     }
 </style>

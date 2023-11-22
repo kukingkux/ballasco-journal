@@ -1,4 +1,5 @@
 <body>
+
     <!-- offcanvas -->
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
         id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -7,7 +8,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="offcanvas-header d-flex justify-content-end">
+            <div class="offcanvas-header d-flex justify-content-between">
+                <div class="d-flex align-items-center" style="max-height: 50px !important">
+                    <img src="assets/ballasco.png" width="50px" height="col" style="border-radius: 8px;">
+                    <h4 class="col mb-0 ms-2 text-header"><span ballas>ba<i>l</i></span
+                        ><i>l</i>asCO</h4>
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <hr>
@@ -31,13 +37,13 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="/agenda" class="nav-link  {{ request()->is('agenda') ? 'active' : 'nav-link' }}"
                             aria-current="page">
                             <i class="fa-solid fa-clipboard-user"></i>&nbsp;
                             <span class="sdtext">Absen</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a href="/history" class="nav-link {{ request()->is('history') ? 'active' : 'nav-link' }} "
                             aria-current="page">
@@ -72,7 +78,7 @@
         </div>
     </div>
     <nav>
-        <div class="sidebar close">
+        <div class="sidebar close" style="z-index: 1">
             <div class="text-center">
                 <button class="btn" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
@@ -81,7 +87,7 @@
             <hr>
             <div class="wrapper">
                 <ul class="nav nav-item nav-pills flex-column">
-                    @role('admin')
+                    {{-- @role('admin') --}}
                         <li class="navsd mb-2 text-center" data-bs-toggle="tooltip" data-bs-placement="right"
                             title="Dashboard (Admin)">
                             <a href="/admin"
@@ -89,7 +95,7 @@
                                 <i class="fa-solid fa-toolbox"></i>
                             </a>
                         </li>
-                    @endrole
+                    {{-- @endrole --}}
                     <li class="navsd mb-2 text-center" data-bs-toggle="tooltip" data-bs-placement="right"
                         title="Dashboard">
                         <a href="/dashboard"
@@ -99,13 +105,13 @@
                         </a>
                     </li>
 
-                    <li class="navsd mb-2 text-center" data-bs-toggle="tooltip" data-bs-placement="right"
+                    {{-- <li class="navsd mb-2 text-center" data-bs-toggle="tooltip" data-bs-placement="right"
                         title="Agenda">
                         <a href="/agenda"
                             class="btn btn-primary mainsd nav-link {{ request()->is('agenda') ? 'active' : 'nav-link' }}">
                             <i class="fa-solid fa-clipboard-user"></i>
                         </a>
-                    </li>
+                    </li> --}}
                     </li>
                     <li class="navsd mb-2 text-center" data-bs-toggle="tooltip" data-bs-placement="right"
                         title="Riwayat">
@@ -115,27 +121,16 @@
                         </a>
                     </li>
 
-                    <li class="navsd mb-2 text-center">
-                        <div class="btn-group dropend">
-                            <button type="button" class="nav-list btn btn-primary mainsd nav-link dropdown-toggle"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-circle-user"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/logout"><i
-                                            class="fa-solid fa-arrow-up-from-bracket"></i>&nbsp;Sign Out</li></a>
-                            </ul>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
+
+
     <!-- end sidebar -->
 
     @extends('partials.layouts.nav_style')
     @extends('partials.layouts.nav_script')
 
 </body>
-
-</html>

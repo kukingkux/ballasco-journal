@@ -1,9 +1,10 @@
 @include('partials.dashboard_head')
 
 <body style="background-color: #f4f4f4">
-    <div style="display: flex; gap: 10px;">
-        @include('layouts.nav')
-        <div class="container p-5">
+    @include('layouts.sidenav')
+    <div class="flex-column">
+        @include('layouts.topnav')
+        <div class="container pe-5">
 
             <!-- dashboard title -->
             <h5 class="mt-4">
@@ -27,64 +28,27 @@
             </h5>
             <!-- end dashboard title -->
             <!-- card -->
-            <div class="cardflex">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-subtitle">Total Users</h5>
-                            <h3 class="m-0">{{ $count_user }}</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-subtitle">Member</h5>
-                            <h3 class="m-0">{{ $count_member }}</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-subtitle">Admin</h5>
-                            <h3 class="m-0">{{ $count_admin }}</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <!-- end card -->
             <!-- btn button -->
+            <div class="d-flex mb-4" style="gap: 50px">
 
-            <div class=" mt-4"
-                style="box-shadow: 0px -5px 20px -10px #a18aff; background-color: #fff; border-radius: 12px;">
-                <div class="row align-items-center text-center">
-                    <div class="col-lg-4">
-                        <img src="https://img.freepik.com/free-vector/confirmed-attendance-concept-illustration_114360-7745.jpg?w=740&t=st=1691032445~exp=1691033045~hmac=70e11368e7d6b65288d8fa3bd34515850ca6e0a524e592a979ae638fad26a3f1"
-                            alt="customer-support" class="img-fluid p-1" />
-                    </div>
-                    <div class="col-lg-8">
-                        <a href="/agenda"><button type="button" class="btn btn-outline-secondary mb-4 mt-2">
-                                Absen
-                            </button></a>
-                        <a href="/history"><button type="button" class="btn btn-outline-secondary mb-4 mt-2">
-                                Riwayat
-                            </button></a>
-                        <a href="/logout"><button type="button" class="btn btn-outline-secondary mb-4 mt-2">
-                                Logout
-                            </button></a>
-                    </div>
+                <div class=" mt-4 p-2"
+                    style="box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75); background-color: #fff; border-radius: 12px; flex: 1">
+                    @include('layouts.form_agenda')
+                </div>
+
+                <!-- end btn button -->
+                <div>
+                    @include('layouts.kalender')
                 </div>
             </div>
-
-            <!-- end btn button -->
-            @include('layouts.kalender')
-
 
         </div>
     </div>
 
     @include('partials.css_container')
+    @include('partials.css_readonly')
     @extends('partials.dashboard_script')
 </body>
 

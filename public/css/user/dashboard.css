@@ -27,7 +27,7 @@
     width: 100%;
     border-radius: 12px;
     border-style: none;
-    box-shadow: 0px 10px 20px -10px #a18aff;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
 @media (max-width: 768px) {

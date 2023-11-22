@@ -4,7 +4,9 @@
 
     <div style="display: flex; gap: 10px;">
         @include('admin.layouts.nav')
-        <div class="container p-5">
+            <div class="flex-column">
+            @include('admin.layouts.topnav')
+        <div class="container pe-5">
 
             <!-- dashboard title -->
             <h5 class="usn mt-4">

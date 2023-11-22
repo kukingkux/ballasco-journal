@@ -30,8 +30,9 @@ class OfficeController extends Controller
 
     public function update(Request $request, Office $office)
     {
-        $validated = $request->validate(['name' => 'required']);
-        $office->update($validated);
+        $input = $request->all();
+        $office->fill($input)->save();
+
 
         return to_route('admin.groups.index');
     }

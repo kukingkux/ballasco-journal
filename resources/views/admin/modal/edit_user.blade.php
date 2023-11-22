@@ -65,7 +65,7 @@
                                 style="border-radius: 10px; margin-top: 10px; background-color: #F4F4F4; border-style: none;">
                                 <option selected hidden>{{ $data->role->name }}</option>
                                 @foreach ($roles as $role)
-                                    <option value="{{ $role->id }}" selected>{{ $role->name }}</option>
+                                    <option value="{{ $role->id }}">{{ $role->name }}</option>
                                 @endforeach
                                 @if ($errors->has('role_id'))
                                     <span class="text-danger">{{ $errors->first('role_id') }}</span>

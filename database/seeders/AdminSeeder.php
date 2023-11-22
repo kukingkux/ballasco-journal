@@ -18,7 +18,7 @@ class AdminSeeder extends Seeder
             'username' => 'admin',
             'email' => 'admin@admin.com',
             'groups_id' => '1',
-            'office_id' => '0',
+            'office_id' => '1',
             'position_id' => '0',
             'gender' => 'L',
             'address' => 'NULL',

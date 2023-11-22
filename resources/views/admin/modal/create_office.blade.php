@@ -21,7 +21,7 @@
                         <div class="col">
                             <label for="">Group id</label>
                             <select type="text" class="form-control @error('groups_id') is-invalid @enderror"
-                                id="groups_id" name="groups_id"
+                                id="group_id" name="group_id"
                                 style="border-radius: 10px; margin-top: 10px; background-color: #F4F4F4; border-style: none;">
                                 @foreach ($global_groups as $data)
                                     <option value="{{ $data->id }}">

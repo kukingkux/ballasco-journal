@@ -1,6 +1,6 @@
 <body>
     <!-- offcanvas -->
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="1"
         id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
 
@@ -60,7 +60,7 @@
                             <span class="sdtext">Roles & Permission</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <button class="nav-link btn btn-secondary dropdown-toggle text-start" style="width: 100%;"
                             type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i
                                 class="fa-solid fa-gear"></i>&nbsp; <span class="sdtext">Opsi
@@ -71,7 +71,7 @@
                                     Out</p></a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <!-- {{-- @endforeach --}} -->
                 </ul>
             </div>
@@ -87,7 +87,7 @@
         </div>
     </div>
     <nav>
-        <div class="sidebar close">
+        <div class="sidebar close" style="z-index: 1">
             <div class="text-center">
                 <button class="btn" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
@@ -127,7 +127,7 @@
                             <i class="fa-solid fa-clock-rotate-left"></i>
                         </a>
                     </li>
-                    @role('admin')
+                    {{-- @role('admin') --}}
                         <li class="navsd mb-2 text-center" data-bs-toggle="tooltip" data-bs-placement="right"
                             title="Offices & Groups">
                             <a href="{{ route('admin.groups.index') }}"
@@ -144,7 +144,7 @@
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
                             </a>
                         </li>
-                        <li class="navsd mb-2 text-center">
+                        {{-- <li class="navsd mb-2 text-center">
                             <div class="btn-group dropend">
                                 <button type="button" class="nav-list btn btn-primary mainsd dropdown-toggle"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -155,8 +155,8 @@
                                                 class="fa-solid fa-arrow-up-from-bracket"></i>&nbsp;Sign Out</a></li>
                                 </ul>
                             </div>
-                        </li>
-                    @endrole
+                        </li> --}}
+                    {{-- @endrole --}}
                 </ul>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="GroupDelete-{{ $data->id }}" tabindex="-1" aria-labelledby="ModalDeleteLabel"
+<div class="modal fade" id="PermissionDelete-{{ $data->id }}" tabindex="-1" aria-labelledby="ModalDeleteLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <form method="POST" action="{{ route('admin.groups.destroy', $data) }}">
+                <form method="POST" action="{{ route('admin.permission.destroy', $data) }}">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Yakin</button>

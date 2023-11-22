@@ -15,7 +15,7 @@
                         <div class="col">
                             <label for="">Nama Groups</label>
                             <input type="text" class="form-control" id="name" name="name"
-                                value="{{ $data->name }}"
+                                value="{{ $data->group_name }}"
                                 style="border-radius: 10px; margin-top: 10px; background-color: #F4F4F4; border-style: none;">
                             @error('name')
                                 <span class="text-danger text-sm">{{ $message }}</span>
@@ -23,11 +23,11 @@
                         </div>
                         <div class="m-3">
                             <label class="form-label">Period Start</label>
-                            <input type="date" value="{{ $data->period_start }}" class="form-control" name="tanggal"
-                                required>
+                            <input type="date" value="{{ $data->period_start }}" class="form-control"
+                                name="period_start" required>
 
                             <label class="form-label">Period End</label>
-                            <input type="date" value="{{ $data->period_end }}" class="form-control" name="tanggal"
+                            <input type="date" value="{{ $data->period_end }}" class="form-control" name="period_end"
                                 required>
                         </div>
                         <div class="modal-footer">

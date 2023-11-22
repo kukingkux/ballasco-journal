@@ -2,7 +2,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content" style="border-radius: 20px;">
-            <div class="modal-header" style="background-color: #6E56CF; color: #fff; border-radius: 20px 20px 0px 0px;">
+            <div class="modal-header" style="background-color: #000000; color: #fff; border-radius: 0.3rem 0.3rem 0 0;">
                 <h1 class="modal-title fs-5" id="ModalViewLabel">Details</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
