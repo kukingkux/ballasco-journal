@@ -134,7 +134,7 @@ view()->composer(['*'], function ($view) {
     $currentuser = User::find($userId);
     $view->with('currentuser', $currentuser);
 
-    $month = Date::select('month')->distinct()->get();
+    $month = Date::select('month')->orderBy('month', 'asc')->distinct()->get();
     $year = Date::select('year')->distinct()->get();
     $view->with('month', $month)
     ->with('year', $year);

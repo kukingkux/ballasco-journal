@@ -15,9 +15,9 @@
                         </p>
                     </div>
                     <div class="mb-3">
-                        <label for="disabledSelect" class="form-label"><strong>Sekolah</strong></label>
+                        <label for="disabledSelect" class="form-label"><strong>Group</strong></label>
                         <p>
-                            {{ $data->group_name }}
+                            {{ $data->group_name }} ({{ $data->groups_id }})
                         </p>
                     </div>
                     <div class="mb-3">

@@ -88,15 +88,15 @@
                                     <td>{{ $data->username }}</td>
                                     <td class="text-truncate" style="max-width: 150px;">
                                         {{ $data->password }}</td>
-                                    <td>{{ $data->address }}</td>
-                                    <td>{{ $data->gender }}</td>
+                                    <td>{{ $data->address ?? 'None' }}</td>
+                                    <td>{{ $data->gender ?? 'None' }}</td>
                                     <td>{{ $data->status ?? 'None' }}</td>
-                                    <td> {{ $data->role->name }}{{ $data->role_id }}</td>
+                                    <td><i> {{ $data->role->name }} ({{ $data->role_id }})</i></td>
                                     <td><i>{{ $data->groups->group_name ?? 'None' }} ({{ $data->groups_id }})
                                         </i>
                                     </td>
-                                    <td>{{ $data->office_id }}</td>
-                                    <td>{{ $data->position_id }}</td>
+                                    <td><i>{{ $data->office->name }} ({{ $data->office_id }})</i> </td>
+                                    <td>{{ $data->position_id ?? 'None' }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <button data-bs-toggle="modal"
@@ -110,7 +110,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                @include('admin.modal.view')
+                                @include('admin.modal.view_user')
                                 @include('admin.modal.edit_user')
                                 @include('admin.modal.delete_user')
                             @endforeach

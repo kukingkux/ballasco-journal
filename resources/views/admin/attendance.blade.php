@@ -54,7 +54,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Sekolah</th>
+                            <th>Group</th>
                             <th>Waktu</th>
                             <th>Tanggal</th>
                             <th>Kegiatan</th>
@@ -80,7 +80,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            @include('admin.modal.view2')
+                            @include('admin.modal.view_attendance')
                             @include('admin.modal.modaldelete')
                         @endforeach
 

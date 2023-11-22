@@ -4,17 +4,6 @@
     }
 }
 
-.btn.btn-outline-secondary.mb-4.mt-2 {
-    color: black;
-    border-color: #6f61c0;
-}
-
-.btn.btn-outline-secondary.mb-4.mt-2:hover {
-    color: white;
-    background-color: #6f61c0;
-    border-color: #6f61c0;
-}
-
 .cardflex {
     display: flex;
     justify-content: space-between;

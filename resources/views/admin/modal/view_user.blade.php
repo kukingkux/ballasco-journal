@@ -18,14 +18,13 @@
                         <div class="mb-3 col-4">
                             <label for="disabledSelect" class="form-label"><strong>Role ID</strong></label><br>
                             <p>
-                                {{ $data->role_id }}
+                                {{ $data->role->name }} ({{ $data->role_id }})
                             </p>
                         </div>
                         <div class="mb-3 col-4">
                             <label for="disabledSelect" class="form-label"><strong>Group ID</strong></label><br>
                             <p>
-                                {{ $data->groups->group_name ?? 'None' }}
-                            <p>({{ $data->groups_id }})</p>
+                                {{ $data->groups->group_name ?? 'None' }} ({{ $data->groups_id }})
                             </p>
                         </div>
                     </div>
@@ -33,14 +32,14 @@
                         <div class="mb-3 col-4">
                             <label class="form-label"><strong>Office ID</strong></label><br>
                             <p>
-                                {{ $data->office_id }}
+                                {{ $data->office->name }} ({{ $data->office_id }})
                             </p>
                         </div>
 
                         <div class="mb-3 col-4">
                             <label class="form-label"><strong>Position ID</strong></label><br>
                             <p>
-                                {{ $data->position_id }}
+                                {{ $data->position_id ?? 'None' }}
                             </p>
                         </div>
                     </div>
@@ -72,7 +71,7 @@
                     <div class="mb-3">
                         <label class="form-label"><strong>Remember Token</strong></label>
                         <p>
-                            {{ $data->remember_token }}
+                            {{ $data->remember_token ?? 'None' }}
                         </p>
                     </div>
                     <div class="mb-3">
@@ -84,7 +83,7 @@
                     <div class="mb-3">
                         <label class="form-label"><strong>Access Token</strong></label>
                         <p>
-                            {{ $data->access_token }}
+                            {{ $data->access_token ?? 'None' }}
                         </p>
                     </div>
                     <div class="mb-3">
@@ -96,7 +95,7 @@
                     <div class="mb-3">
                         <label class="form-label"><strong>Gender</strong></label>
                         <p>
-                            {{ $data->gender }}
+                            {{ $data->gender ?? 'None' }}
                         </p>
                     </div>
                     <div class="mb-3">
